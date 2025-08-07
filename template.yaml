@@ -74,6 +74,8 @@ spec:
           description: ${{ parameters.description }}
           aws_region: ${{ parameters.aws_region }}
           key_pair_name: ${{ parameters.key_pair_name }}
+          repoUrl: ${{ parameters.repoUrl }}
+          
     - id: publish
       name: Publish
       action: publish:github
@@ -95,6 +97,7 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
 
 
 
