@@ -85,7 +85,7 @@ spec:
       name: Register
       action: catalog:register
       input:
-        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
+        repoContentsUrl: ${{ parameters.repoUrl | replace('github.com?', 'https://github.com/') | replace('&repo=', '/') }}
         catalogInfoPath: '/catalog-info.yaml'
   output:
     links:
@@ -94,4 +94,5 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
 
