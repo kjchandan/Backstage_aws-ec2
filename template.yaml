@@ -61,6 +61,7 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+              - github.kyndryl.net
   steps:
     - id: fetch
       name: Fetch Skeleton
@@ -76,7 +77,8 @@ spec:
       name: Publish
       action: publish:github
       input:
-        allowedHosts: ['github.com']
+        host: github.com
+        allowedHosts: ['github.com', 'github.kyndryl.net']
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
     - id: register
