@@ -57,7 +57,6 @@ spec:
         repoUrl:
           title: Repository Location
           type: string
-          pattern: ^https:\/\/github\.com\/[a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+$
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
@@ -97,6 +96,7 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
 
 
 
