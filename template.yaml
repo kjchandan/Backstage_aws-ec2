@@ -77,8 +77,8 @@ spec:
       name: Publish
       action: publish:github
       input:
-        host: github.com
-        allowedHosts: ['github.com', 'github.kyndryl.net']
+        # host: github.com
+        # allowedHosts: ['github.com', 'github.kyndryl.net']
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
     - id: register
@@ -94,3 +94,4 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
