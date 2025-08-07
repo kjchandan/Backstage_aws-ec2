@@ -67,7 +67,7 @@ spec:
       name: Fetch Skeleton
       action: fetch:template
       input:
-        url: ./skeleton
+        url: ${{ parameters.repoUrl }}
         values:
           name: ${{ parameters.name }}
           description: ${{ parameters.description }}
