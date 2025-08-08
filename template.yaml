@@ -67,7 +67,7 @@ spec:
       name: Fetch Skeleton
       action: fetch:template
       input:
-        url: ${{ parameters.repoUrl }}
+        url: ./skeleton
         values:
           name: ${{ parameters.name }}
           description: ${{ parameters.description }}
@@ -96,3 +96,4 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
