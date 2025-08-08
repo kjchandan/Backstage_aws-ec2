@@ -131,7 +131,7 @@ jobs:
           - **Public IP**: ${{ steps.outputs.outputs.instance_public_ip }}
           - **SSH Command**: \`${{ steps.outputs.outputs.ssh_command }}\`
 
-          **AWS Console**: [View Instance](https://console.aws.amazon.com/ec2/v2/home?region=${{ vars.AWS_REGION || 'us-east-1' }}#Instances:instanceId=${{ steps.outputs.outputs.instance_id }})
+          **AWS Console**: [View Instance](https://console.aws.amazon.com/ec2/v2/home?region='us-east-1'#Instances:instanceId=${{ steps.outputs.outputs.instance_id }})
 
           *Deployed by: @${{ github.actor }}*`;
 
@@ -141,4 +141,5 @@ jobs:
             commit_sha: context.sha,
             body: output
           })
+
 
