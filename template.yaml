@@ -74,8 +74,6 @@ spec:
           aws_region: ${{ parameters.aws_region }}
           key_pair_name: ${{ parameters.key_pair_name }}
           repoUrl: ${{ parameters.repoUrl }}
-        var:
-          instance_name: ${{ parameters.name }}
         
           
     - id: publish
@@ -99,5 +97,6 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
 
 
