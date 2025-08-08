@@ -67,7 +67,7 @@ spec:
       name: Fetch Skeleton
       action: fetch:template
       input:
-        url: https://github.com/kjchandan/Backstage_aws-ec2/tree/main/skeleton #${{ parameters.repoUrl }}
+        url: ${{ parameters.repoUrl }}
         values:
           name: ${{ parameters.name }}
           description: ${{ parameters.description }}
@@ -96,11 +96,3 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
-
-
-
-
-
-
-
-
