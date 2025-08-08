@@ -73,16 +73,7 @@ spec:
           description: ${{ parameters.description }}
           aws_region: ${{ parameters.aws_region }}
           key_pair_name: ${{ parameters.key_pair_name }}
-          repoUrl: ${{ parameters.repoUrl }}
-
-    - id: write-tfvars
-      name: Write Terraform Variables
-      action: fs:write
-      input:
-        path: ./terraform/terraform.tfvars
-        content: |
-          instance_name = "${{ parameters.name }}"
-       
+          repoUrl: ${{ parameters.repoUrl }}     
           
     - id: publish
       name: Publish
@@ -105,6 +96,7 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
 
 
 
