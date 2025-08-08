@@ -4,7 +4,7 @@ variable "aws_region" {
 
 }
 
-variable "name" {
+variable "instance_name" {
   type        = string
   description = "EC2 instance name"
 }
@@ -50,6 +50,7 @@ variable "key_pair_name" {
 }
 
  
+
 
 
 
