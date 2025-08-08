@@ -110,13 +110,13 @@ jobs:
       if: github.event.inputs.action == 'destroy'
       run: terraform destroy -auto-approve -input=false
 
-    - name: Get Terraform Outputs
-      if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || github.event.inputs.action == 'apply'
-      id: outputs
-      run: |
-        echo "instance_id=$(terraform output -raw instance_id)" >> $GITHUB_OUTPUT
-        echo "instance_public_ip=$(terraform output -raw instance_public_ip)" >> $GITHUB_OUTPUT
-        echo "ssh_command=$(terraform output -raw ssh_connection_command)" >> $GITHUB_OUTPUT
+    # - name: Get Terraform Outputs
+    #   if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || github.event.inputs.action == 'apply'
+    #   id: outputs
+    #   run: |
+    #     echo "instance_id=$(terraform output -raw instance_id)" >> $GITHUB_OUTPUT
+    #     echo "instance_public_ip=$(terraform output -raw instance_public_ip)" >> $GITHUB_OUTPUT
+    #     echo "ssh_command=$(terraform output -raw ssh_connection_command)" >> $GITHUB_OUTPUT
 
     - name: Comment Instance Details
       if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || github.event.inputs.action == 'apply'
@@ -141,6 +141,7 @@ jobs:
             commit_sha: context.sha,
             body: output
           })
+
 
 
 
