@@ -62,7 +62,7 @@ resource "aws_security_group" "ec2_sg" {
  
 # EC2 Instance
 resource "aws_instance" "example" {
-  ami                    = var.ami_id
+  ami                    = ami-084a7d336e816906b
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
@@ -72,3 +72,4 @@ resource "aws_instance" "example" {
     Name = "Terraform-EC2"
   }
 }
+
