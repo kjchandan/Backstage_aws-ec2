@@ -19,7 +19,8 @@ spec:
   type: infrastructure
   lifecycle: experimental
   owner: user:guest
-  system: cloud-infrastructure
+  # system: cloud-infrastructure
+
 
 
 
