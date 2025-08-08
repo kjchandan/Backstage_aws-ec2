@@ -6,7 +6,6 @@ variable "aws_region" {
 
 variable "name" {
   type        = string
-  default     = "BackstageEC2"
   description = "EC2 instance name"
 }
  
@@ -51,6 +50,7 @@ variable "key_pair_name" {
 }
 
  
+
 
 
 
