@@ -3,6 +3,11 @@ variable "aws_region" {
   default = "us-east-1"
 
 }
+
+variable "name" {
+  type        = string
+  description = "EC2 instance name"
+}
  
 variable "vpc_cidr" {
 
@@ -45,3 +50,4 @@ variable "key_pair_name" {
 }
 
  
+
