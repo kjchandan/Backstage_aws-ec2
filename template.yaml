@@ -12,7 +12,7 @@ metadata:
     - infrastructure
 spec:
   owner: user:kjchandan
-  type: infrastructure
+  type: Backstage
   parameters:
     - title: Basic Information
       required:
@@ -97,6 +97,7 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
 
 
 
