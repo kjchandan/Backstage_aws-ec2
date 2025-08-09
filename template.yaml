@@ -2,16 +2,15 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: aws-ec2-instance
-  title: Complete GP1
-  description: Provising EC2 
+  title: AWS EC2 Instance
+  description: Template to provision an AWS EC2 instance using Terraform 
   tags:
-    - Backstage
     - aws
     - ec2
     - terraform
     - infrastructure
 spec:
-  owner: user:chandan
+  owner: user:guest
   type: infrastructure
   parameters:
     - title: Basic Information
@@ -97,6 +96,7 @@ spec:
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
+
 
 
 
